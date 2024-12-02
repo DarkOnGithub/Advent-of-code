@@ -11,7 +11,7 @@ def is_valid(line: List[int]) -> bool:
     
     return True
 
-def can_remove_one(line: List[int]) -> bool:
+def try_remove_one(line: List[int]) -> bool:
     n = len(line)
     for j in range(n):
         if is_valid(line[:j] + line[j + 1:]):
@@ -27,7 +27,7 @@ def main(input_lines: List[List[int]]) -> tuple[int, int]:
             continue
         is_valid_line = is_valid(line)
         valid_count += is_valid_line
-        valid_or_one_removed_count += is_valid_line or can_remove_one(line)
+        valid_or_one_removed_count += is_valid_line or try_remove_one(line)
     
     return valid_count, valid_or_one_removed_count
 
