@@ -14,7 +14,9 @@ def count_valid_equations(equations: List[Tuple[int, List[int]]], allow_concat: 
         for number in numbers[1:]:
             previous_operations, current_operations = current_operations, set()
             for op in previous_operations:
-                current_operations.update([op + number, op * number])
+                for op1 in [op + number, op * number]:
+                    if op1 <= result:
+                        current_operations.add(op1)
                 if allow_concat:
                     current_operations.add(number)
                     concat_val = int(str(op) + str(number))
@@ -22,12 +24,16 @@ def count_valid_equations(equations: List[Tuple[int, List[int]]], allow_concat: 
                         current_operations.add(concat_val)
         total += result if result in current_operations else 0
     return total
-
+import time
 def main():
     with open("./input.txt", "r") as f:
         equations = parse_input(f.read())
-    print(count_valid_equations(equations))
-    print(count_valid_equations(equations, allow_concat=True))
-
+    start = time.time()
+    (count_valid_equations(equations))
+    print(time.time() - start)
+    start = time.time()
+    
+    (count_valid_equations(equations, allow_concat=True))
+    print(time.time() - start)
 if __name__ == "__main__":
     main()
