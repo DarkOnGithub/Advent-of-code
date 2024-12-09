@@ -28,12 +28,7 @@ import time
 def main():
     with open("./input.txt", "r") as f:
         equations = parse_input(f.read())
-    start = time.time()
-    (count_valid_equations(equations))
-    print(time.time() - start)
-    start = time.time()
-    
-    (count_valid_equations(equations, allow_concat=True))
-    print(time.time() - start)
+    print(count_valid_equations(equations))
+    print(count_valid_equations(equations, allow_concat=True))
 if __name__ == "__main__":
     main()
