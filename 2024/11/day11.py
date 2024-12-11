@@ -13,10 +13,10 @@ def main(stones: Dict[int, int], blinks: int):
     for _   in range(blinks):
         new_blink_stones = {}
         for stone in stones:
+            s = str(stone)
             if stone == 0:
                 add(new_blink_stones, 1, stones[stone])
-            elif len(str(stone)) % 2 == 0:
-                s = str(stone)
+            elif len(s) % 2 == 0:
                 mid = len(s) // 2
                 add(new_blink_stones, int(s[:mid]), stones[stone])
                 add(new_blink_stones, int(s[mid:]), stones[stone])
