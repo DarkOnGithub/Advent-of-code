@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from typing import List
 
 def parse_input(input: str) -> List[int]:
