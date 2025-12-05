@@ -1,16 +1,17 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-use std::any::{Any, TypeId};
 
 
 mod day_1;
 mod day_2;
 mod day_3;
+mod day_4;
 
 use day_1::*;
 use day_2::*;
 use day_3::*;
-
+use day_4::*;
+use crate::day_4::day_4_solver_part_1;
 
 const EXAMPLES_SEPARATOR: &str = "--[[--]]--";
 
@@ -40,6 +41,8 @@ fn main() {
     solve_day("day_2.txt", day_2_solver_part_2);
     solve_day("day_3.txt", day_3_solver_part_1);
     solve_day("day_3.txt", day_3_solver_part_2);
+    solve_day("day_4.txt", day_4_solver_part_1);
+    solve_day("day_4.txt", day_4_solver_part_2);
 
 
 }
