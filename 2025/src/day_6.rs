@@ -51,7 +51,6 @@ fn calculate_right_to_left(grid: Vec<Vec<char>>) -> i64 {
             continue;
         }
 
-        // Each non-separator column represents one number in the current problem.
         let value = digits.parse::<i64>().unwrap();
         numbers.push(value);
 
