@@ -11,6 +11,7 @@ mod day_6;
 mod day_7;
 mod day_8;
 mod day_9;
+mod day_10;
 
 
 use day_1::*;
@@ -22,6 +23,7 @@ use day_6::*;
 use day_7::*;
 use day_8::*;
 use day_9::*;
+use day_10::*;
 
 
 const EXAMPLES_SEPARATOR: &str = "--[[--]]--";
@@ -46,22 +48,24 @@ fn solve_day<T: std::fmt::Display>(input_path: &str, solver: fn(&str) -> T) {
     }
 }
 fn main() {
-    solve_day("day_1.txt", day_1_solver_part_1);
-    solve_day("day_1.txt", day_1_solver_part_2);
-    solve_day("day_2.txt", day_2_solver_part_1);
-    solve_day("day_2.txt", day_2_solver_part_2);
-    solve_day("day_3.txt", day_3_solver_part_1);
-    solve_day("day_3.txt", day_3_solver_part_2);
-    solve_day("day_4.txt", day_4_solver_part_1);
-    solve_day("day_4.txt", day_4_solver_part_2);
-    solve_day("day_5.txt", day_5_solver_part_1);
-    solve_day("day_5.txt", day_5_solver_part_2);
-    solve_day("day_6.txt", day_6_solver_part_1);
-    solve_day("day_6.txt", day_6_solver_part_2);
-    solve_day("day_7.txt", day_7_solver_part_1);
-    solve_day("day_7.txt", day_7_solver_part_2);
-    solve_day("day_8.txt", day_8_solver_part_1);
-    solve_day("day_8.txt", day_8_solver_part_2);
-    solve_day("day_9.txt", day_9_solver_part_1);
-    solve_day("day_9.txt", day_9_solver_part_2);
+    // solve_day("day_1.txt", day_1_solver_part_1);
+    // solve_day("day_1.txt", day_1_solver_part_2);
+    // solve_day("day_2.txt", day_2_solver_part_1);
+    // solve_day("day_2.txt", day_2_solver_part_2);
+    // solve_day("day_3.txt", day_3_solver_part_1);
+    // solve_day("day_3.txt", day_3_solver_part_2);
+    // solve_day("day_4.txt", day_4_solver_part_1);
+    // solve_day("day_4.txt", day_4_solver_part_2);
+    // solve_day("day_5.txt", day_5_solver_part_1);
+    // solve_day("day_5.txt", day_5_solver_part_2);
+    // solve_day("day_6.txt", day_6_solver_part_1);
+    // solve_day("day_6.txt", day_6_solver_part_2);
+    // solve_day("day_7.txt", day_7_solver_part_1);
+    // solve_day("day_7.txt", day_7_solver_part_2);
+    // solve_day("day_8.txt", day_8_solver_part_1);
+    // solve_day("day_8.txt", day_8_solver_part_2);
+    // solve_day("day_9.txt", day_9_solver_part_1);
+    // solve_day("day_9.txt", day_9_solver_part_2);
+    solve_day("day_10.txt", day_10_solver_part_1);
+    solve_day("day_10.txt", day_10_solver_part_2);
 }
