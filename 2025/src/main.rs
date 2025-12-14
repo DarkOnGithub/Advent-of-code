@@ -13,7 +13,7 @@ mod day_8;
 mod day_9;
 mod day_10;
 mod day_11;
-
+mod day_12;
 
 use day_1::*;
 use day_2::*;
@@ -26,6 +26,7 @@ use day_8::*;
 use day_9::*;
 use day_10::*;
 use day_11::*;
+use day_12::*;
 
 
 const EXAMPLES_SEPARATOR: &str = "--[[--]]--";
@@ -71,6 +72,7 @@ fn main() {
     // solve_day("day_9.txt", day_9_solver_part_2);
     // solve_day("day_10.txt", day_10_solver_part_1);
     // solve_day("day_10.txt", day_10_solver_part_2);
-    solve_day("day_11.txt", day_11_solver_part_1); 
-    solve_day("day_11.txt", day_11_solver_part_2); 
+    solve_day("day_11.txt", day_11_solver_part_1);
+    solve_day("day_11.txt", day_11_solver_part_2);
+    solve_day("day_12.txt", day_12_solver_part_1);
 }
