@@ -12,6 +12,7 @@ mod day_7;
 mod day_8;
 mod day_9;
 mod day_10;
+mod day_11;
 
 
 use day_1::*;
@@ -24,6 +25,7 @@ use day_7::*;
 use day_8::*;
 use day_9::*;
 use day_10::*;
+use day_11::*;
 
 
 const EXAMPLES_SEPARATOR: &str = "--[[--]]--";
@@ -47,6 +49,7 @@ fn solve_day<T: std::fmt::Display>(input_path: &str, solver: fn(&str) -> T) {
         println!("Test {}: {}", index + 1, solver(section));
     }
 }
+
 fn main() {
     // solve_day("day_1.txt", day_1_solver_part_1);
     // solve_day("day_1.txt", day_1_solver_part_2);
@@ -66,6 +69,8 @@ fn main() {
     // solve_day("day_8.txt", day_8_solver_part_2);
     // solve_day("day_9.txt", day_9_solver_part_1);
     // solve_day("day_9.txt", day_9_solver_part_2);
-    solve_day("day_10.txt", day_10_solver_part_1);
-    solve_day("day_10.txt", day_10_solver_part_2);
+    // solve_day("day_10.txt", day_10_solver_part_1);
+    // solve_day("day_10.txt", day_10_solver_part_2);
+    solve_day("day_11.txt", day_11_solver_part_1); 
+    solve_day("day_11.txt", day_11_solver_part_2); 
 }
